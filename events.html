@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EventHub | Explore Events</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+
+        <div class="logo">
+            Event<span>Hub</span>
+        </div>
+
+        <nav class="nav-links">
+            <a href="index.html#home">Home</a>
+            <a href="events.html" class="active">Events</a>
+            <a href="registration.html">Register</a>
+            <a href="index.html#footer">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <!-- Page Heading -->
+    <section class="events-header">
+
+        <p class="subtitle">DISCOVER SOMETHING NEW</p>
+
+        <h1>Explore Our Events</h1>
+
+        <p>
+            Find exciting opportunities, develop your skills
+            and connect with amazing people.
+        </p>
+
+    </section>
+
+
+    <!-- Search and Filter -->
+    <section class="event-controls">
+
+        <div class="search-box">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search events by name..."
+                onkeyup="filterEvents()"
+            >
+        </div>
+
+        <div class="filter-box">
+
+            <select id="categoryFilter" onchange="filterEvents()">
+
+                <option value="All">All Categories</option>
+
+                <option value="Technical Workshop">
+                    Technical Workshop
+                </option>
+
+                <option value="Seminar">
+                    Seminar
+                </option>
+
+                <option value="Coding Competition">
+                    Coding Competition
+                </option>
+
+                <option value="Cultural Event">
+                    Cultural Event
+                </option>
+
+                <option value="Career Development">
+                    Career Development
+                </option>
+
+            </select>
+
+        </div>
+
+    </section>
+
+
+    <!-- Event Listing -->
+    <section class="events-section">
+
+        <div class="section-heading">
+            <h2>Upcoming Events</h2>
+            <p>Choose an event and be part of the experience.</p>
+        </div>
+
+        <!-- JavaScript displays event cards here -->
+        <div class="events-grid" id="eventContainer">
+
+        </div>
+
+    </section>
+
+    <!-- Contact Section -->
+    <footer id="contact">
+
+        <div class="footer-content">
+
+            <div>
+                <h2>Event<span>Hub</span></h2>
+                <p>
+                    Discover. Connect. Celebrate.
+                    Be part of exciting experiences.
+                </p>
+            </div>
+
+            <div>
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="events.html">Events</a>
+                <a href="registration.html">Register</a>
+            </div>
+
+            <div>
+                <h3>Contact Us</h3>
+                <p>Email: eventhub@example.com</p>
+                <p>Phone: +91 9876543210</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 EventHub. All Rights Reserved.</p>
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="js/events.js"></script>
+
+</body>
+</html>

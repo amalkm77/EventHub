@@ -1,0 +1,307 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EventHub | Event Management Portal</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+
+        <a class="brand" href="index.html" aria-label="EventHub home">
+
+            <img src="images/Neon EH Event Emblem (1).png"
+                 alt="EventHub logo"
+                 class="brand-logo">
+
+            <span class="logo">Event<span>Hub</span></span>
+
+        </a>
+
+        <nav class="nav-links">
+
+            <a href="index.html#home" class="active">Home</a>
+
+            <a href="events.html">Events</a>
+
+            <a href="registration.html">Register</a>
+
+            <a href="index.html#footer">Contact</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- Home Banner -->
+    <section id="home">
+
+        <header id="banner">
+
+            <h1>Welcome to EventHub</h1>
+
+            <h2>Discover Events. Create Memories.</h2>
+
+            <p>
+                Explore technical workshops, coding competitions,
+                seminars, cultural programmes and career development
+                sessions all in one place.
+            </p>
+
+            <nav class="banner-actions">
+
+                <a href="events.html" class="btn">Explore Events</a>
+
+                <a href="registration.html" class="btn">Register Now</a>
+
+            </nav>
+
+        </header>
+
+    </section>
+
+
+    <!-- Introduction -->
+    <section id="intro">
+
+        <h2>About EventHub</h2>
+
+        <p>
+            EventHub is an event management and registration portal
+            that allows students and faculty members to explore
+            upcoming events and participate in various activities.
+            Discover new opportunities, learn new skills and
+            connect with others through exciting campus events.
+        </p>
+
+    </section>
+
+    <!-- Dashboard -->
+    <section id="dashboard">
+        <h2>Event Dashboard</h2>
+        <div class="dashboard-cards">
+            <article class="dashboard-card">
+                <h3>Total Events</h3>
+                <p id="totalEvents">0</p>
+            </article>
+            <article class="dashboard-card">
+                <h3>Total Registrations</h3>
+                <p id="totalRegistrations">0</p>
+            </article>
+            <article class="dashboard-card">
+                <h3>Technical Events</h3>
+                <p id="technicalEvents">0</p>
+            </article>
+            <article class="dashboard-card">
+                <h3>Cultural Events</h3>
+                <p id="culturalEvents">0</p>
+            </article>
+            <article class="dashboard-card">
+                <h3>Cancelled Registrations</h3>
+                <p id="cancelledRegistrations">0</p>
+            </article>
+        </div>
+    </section>
+
+
+    <!-- Upcoming Events -->
+    <section id="events">
+
+        <h2>Upcoming Events</h2>
+
+        <div class="cards">
+
+
+            <!-- Card 1 -->
+            <div class="card" id="workshop" data-category="Technical Workshop">
+
+                <img src="images/Collaborative Web Development Workshop.png"
+                     alt="Web Development Workshop">
+
+                <h3>Web Development Workshop</h3>
+
+                <p><b>Category:</b> Technical Workshop</p>
+
+                <p><b>Date:</b> 10 December 2026</p>
+
+                <p><b>Venue:</b> Computer Lab</p>
+
+                <p>
+                    Learn HTML, CSS and basic web development
+                    through practical sessions.
+                </p>
+
+                <p><b>Fee:</b> ₹200</p>
+
+                <button type="button" class="btn" onclick="viewDetails(1)">View Details</button>
+
+                <a href="registration.html?event=1" class="btn">Register Now</a>
+
+            </div>
+
+
+            <!-- Card 2 -->
+            <div class="card" id="coding" data-category="Coding Competition">
+
+                <img src="images/coding.jpg"
+                     alt="Coding Competition">
+
+                <h3>Coding Competition</h3>
+
+                <p><b>Category:</b> Coding Competition</p>
+
+                <p><b>Date:</b> 15 December 2026</p>
+
+                <p><b>Venue:</b> College Auditorium</p>
+
+                <p>
+                    Test your programming skills and solve
+                    challenging coding problems.
+                </p>
+
+                <p><b>Fee:</b> ₹100</p>
+
+                <button type="button" class="btn" onclick="viewDetails(3)">View Details</button>
+
+                <a href="registration.html?event=3" class="btn">Register Now</a>
+
+            </div>
+
+
+            <!-- Card 3 -->
+            <div class="card" id="seminar" data-category="Seminar">
+
+                <img src="images/seminar.jpg"
+                     alt="Technology Seminar">
+
+                <h3>Technology Seminar</h3>
+
+                <p><b>Category:</b> Seminar</p>
+
+                <p><b>Date:</b> 20 December 2026</p>
+
+                <p><b>Venue:</b> Seminar Hall</p>
+
+                <p>
+                    Explore new technologies and learn about
+                    the latest developments in IT.
+                </p>
+
+                <p><b>Fee:</b> Free</p>
+
+                <button type="button" class="btn" onclick="viewDetails(2)">View Details</button>
+
+                <a href="registration.html?event=2" class="btn">Register Now</a>
+
+            </div>
+
+
+            <!-- Card 4 -->
+            <div class="card" id="cultural" data-category="Cultural Event">
+
+                <img src="images/Kerala Cultural Festival Performance.png"
+                     alt="Cultural Programme">
+
+                <h3>Cultural Fest</h3>
+
+                <p><b>Category:</b> Cultural Event</p>
+
+                <p><b>Date:</b> 25 December 2026</p>
+
+                <p><b>Venue:</b> College Ground</p>
+
+                <p>
+                    Enjoy music, dance, performances and
+                    various cultural activities.
+                </p>
+
+                <p><b>Fee:</b> ₹150</p>
+
+                <button type="button" class="btn" onclick="viewDetails(4)">View Details</button>
+
+                <a href="registration.html?event=4" class="btn">Register Now</a>
+
+            </div>
+
+
+            <!-- Card 5 -->
+            <div class="card" id="career" data-category="Career Development">
+
+                <img src="images/career.jpg"
+                     alt="Career Development Session">
+
+                <h3>Career Development Session</h3>
+
+                <p><b>Category:</b> Career Development</p>
+
+                <p><b>Date:</b> 30 December 2026</p>
+
+                <p><b>Venue:</b> Seminar Hall</p>
+
+                <p>
+                    Improve your interview skills and learn
+                    about career opportunities.
+                </p>
+
+                <p><b>Fee:</b> Free</p>
+
+                <button type="button" class="btn" onclick="viewDetails(5)">View Details</button>
+
+                <a href="registration.html?event=5" class="btn">Register Now</a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Registration Section -->
+    <section id="register">
+
+        <h2>Register for Events</h2>
+
+        <p>
+            Interested in participating? Explore our events
+            and register for your favourite activities.
+        </p>
+
+        <a href="events.html" class="btn">View Events</a>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer id="footer">
+
+        <h2>Contact Us</h2>
+
+        <p>Email: eventhub@gmail.com</p>
+
+        <p>Phone: 9876543210</p>
+
+        <p>Follow Us</p>
+
+        <a href="#">Instagram</a>
+
+        <a href="#">Facebook</a>
+
+        <a href="#">LinkedIn</a>
+
+        <p>© 2026 EventHub. All Rights Reserved.</p>
+
+    </footer>
+
+    <script src="js/events.js"></script>
+    <script src="js/dashboard.js"></script>
+
+</body>
+</html>

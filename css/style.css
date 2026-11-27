@@ -1,0 +1,729 @@
+
+/* =================================
+   GENERAL STYLING
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f5fb;
+    color: #17213c;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+/* =================================
+   NAVIGATION BAR
+================================= */
+
+.navbar {
+    background-color: #071936;
+    color: white;
+    min-height: 90px;
+    padding: 15px 7%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: white;
+    text-decoration: none;
+}
+
+.brand-logo {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.navbar .logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.navbar .logo span {
+    color: #a78bfa;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    background-color: transparent;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #a78bfa;
+}
+
+
+/* =================================
+   HOME BANNER
+================================= */
+
+#banner {
+    text-align: center;
+    background-color: rgb(45, 50, 90);
+    padding: 35px 20px;
+    background-image: url("../images/Tech Conference Spotlight.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 560px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#banner h1 {
+    color: white;
+    font-size: 50px;
+    margin-bottom: 12px;
+}
+
+#banner h2 {
+    color: rgb(205, 190, 255);
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+#banner p {
+    color: white;
+    font-size: 18px;
+    line-height: 1.5;
+    max-width: 760px;
+    margin: 0 auto 20px;
+}
+
+.banner-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.banner-actions .btn {
+    margin: 0;
+}
+
+
+/* =================================
+   BUTTONS
+================================= */
+
+.btn {
+    background-color: rgb(111, 76, 210);
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: rgb(75, 48, 155);
+}
+
+
+/* =================================
+   INTRODUCTION
+================================= */
+
+#intro {
+    text-align: center;
+    padding: 30px;
+}
+
+#intro h2 {
+    color: rgb(111, 76, 210);
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+#intro p {
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+/* Dashboard */
+#dashboard {
+    padding: 35px 7%;
+    text-align: center;
+}
+
+#dashboard h2 {
+    color: #17213c;
+    margin-bottom: 20px;
+}
+
+.dashboard-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.dashboard-card {
+    flex: 1 1 150px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.dashboard-card h3 {
+    font-size: 15px;
+}
+
+.dashboard-card p {
+    margin-top: 10px;
+    color: #6345c5;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+
+/* =================================
+   HOMEPAGE EVENTS SECTION
+================================= */
+
+#events {
+    text-align: center;
+    padding: 35px 7%;
+}
+
+#events h2 {
+    color: rgb(30, 35, 65);
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+
+/* Cards Arrangement */
+
+#events .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+}
+
+
+/* Individual Card */
+
+#events .card {
+    background-color: white;
+    width: 100%;
+    padding: 15px;
+    margin: 0;
+    text-align: left;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s;
+}
+
+#events .card:hover {
+    transform: translateY(-5px);
+}
+
+
+/* Card Image */
+
+#events .card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 7px;
+    margin-bottom: 15px;
+}
+
+
+/* Card Heading */
+
+#events .card h3 {
+    color: rgb(111, 76, 210);
+    font-size: 20px;
+    text-align: left;
+    margin-bottom: 12px;
+    min-height: 48px;
+}
+
+
+/* Card Information */
+
+#events .card p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 8px;
+    color: rgb(70, 75, 90);
+}
+
+
+/* Event Description */
+
+#events .card p:nth-of-type(4) {
+    margin-top: 8px;
+    min-height: 63px;
+}
+
+
+/* Event Fee */
+
+#events .card p:nth-of-type(5) {
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+
+/* Card Buttons */
+
+#events .card .btn {
+    display: block;
+    width: 100%;
+    padding: 11px;
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+
+/* Align Buttons at Bottom */
+
+#events .card > button.btn {
+    margin-top: auto;
+}
+
+
+/* =================================
+   REGISTRATION SECTION
+================================= */
+
+#register {
+    background-color: rgb(230, 225, 245);
+    text-align: center;
+    padding: 35px;
+}
+
+#register h2 {
+    color: rgb(30, 35, 65);
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+#register p {
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+
+/* =================================
+   EVENTS PAGE HEADER
+================================= */
+
+.events-header {
+    text-align: center;
+    padding: 45px 20px 25px;
+}
+
+.events-header .subtitle {
+    color: #6345c5;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.events-header h1 {
+    color: #101c3c;
+    margin: 10px 0;
+}
+
+.events-header p {
+    color: #777e91;
+}
+
+
+/* =================================
+   EVENT SEARCH AND FILTER
+================================= */
+
+.event-controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    padding: 15px 20px 30px;
+}
+
+.search-box,
+.filter-box {
+    width: 300px;
+    max-width: 100%;
+}
+
+
+/* =================================
+   EVENTS PAGE CARDS
+================================= */
+
+.events-section {
+    padding: 20px 7% 45px;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.events-grid > * {
+    background-color: white;
+    border-radius: 10px;
+    padding: 18px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.events-grid img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 7px;
+}
+
+.event-card h3 {
+    margin-bottom: 10px;
+    color: #4936a5;
+}
+
+.event-card p {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.event-card .btn {
+    margin: 5px 5px 0 0;
+}
+
+#noEvents {
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+/* =================================
+   EVENT MODAL
+================================= */
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+}
+
+.modal-content {
+    max-width: 600px;
+    margin: 10vh auto;
+    padding: 25px;
+    background: white;
+    border-radius: 10px;
+}
+
+.close-btn {
+    float: right;
+    border: 0;
+    background: transparent;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+/* =================================
+   EVENTS PAGE FOOTER CONTENT
+================================= */
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.footer-content a {
+    display: block;
+    margin-top: 8px;
+    color: #cbd1df;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+/* =================================
+   REGISTRATION PAGE HEADING
+================================= */
+
+.heading {
+    text-align: center;
+    padding: 35px 15px 20px;
+}
+
+.heading h1 {
+    font-size: 32px;
+    color: #101c3c;
+    margin-bottom: 10px;
+}
+
+.heading p {
+    color: #777e91;
+    font-size: 14px;
+}
+
+
+/* =================================
+   REGISTRATION FORM CONTAINER
+================================= */
+
+.container {
+    width: 90%;
+    max-width: 850px;
+    margin: 15px auto 50px;
+    padding: 18px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.07);
+}
+
+
+/* =================================
+   FORM SECTION HEADINGS
+================================= */
+
+.section-title {
+    font-size: 19px;
+    color: #4936a5;
+    margin: 20px 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e8e8f0;
+}
+
+
+/* =================================
+   FORM LAYOUT
+================================= */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #27314b;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d9dce8;
+    border-radius: 7px;
+    outline: none;
+    font-size: 14px;
+    background-color: white;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #7254d8;
+    box-shadow: 0 0 0 2px rgba(114, 84, 216, 0.1);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+
+
+/* =================================
+   RADIO AND CHECKBOX
+================================= */
+
+.option-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.option-group label {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.option-group input {
+    width: auto;
+    accent-color: #6345c5;
+}
+
+
+/* =================================
+   ERROR MESSAGES
+================================= */
+
+.error {
+    color: #dc3545;
+    font-size: 12px;
+    margin-top: 5px;
+    display: block;
+}
+
+
+/* =================================
+   SUBMIT BUTTON
+================================= */
+
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #4936a5, #7954d9);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.submit-btn:hover {
+    background: #352583;
+}
+
+
+/* =================================
+   SUCCESS MESSAGE
+================================= */
+
+#success {
+    display: none;
+    background-color: #f0fff5;
+    border: 1px solid #9bd9ae;
+    border-radius: 10px;
+    padding: 22px;
+    margin-top: 25px;
+}
+
+#success h2 {
+    color: #168344;
+    margin-bottom: 12px;
+}
+
+#success p {
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+#success span {
+    color: #4936a5;
+    font-weight: bold;
+}
+
+#myRegistrations {
+    margin-top: 35px;
+    overflow-x: auto;
+}
+
+#registrationsTable {
+    width: 100%;
+    min-width: 650px;
+    margin-top: 15px;
+    border-collapse: collapse;
+}
+
+#registrationsTable th,
+#registrationsTable td {
+    padding: 10px;
+    border: 1px solid #d9dce8;
+    text-align: left;
+}
+
+#registrationsTable th {
+    background-color: #f4f5fb;
+}
+
+#registrationRows .btn {
+    margin: 2px;
+    padding: 8px;
+    font-size: 12px;
+}
+
+
+/* =================================
+   COMMON FOOTER
+================================= */
+
+footer {
+    background-color: #071936;
+    color: #cbd1df;
+    text-align: center;
+    padding: 20px;
+    font-size: 13px;
+    margin-top: auto;
+}
